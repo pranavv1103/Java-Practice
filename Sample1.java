@@ -1,9 +1,11 @@
 class Demo{
-    int id;
+    static int id;
     String name;
-    public Demo(int id, String name){
-        this.id = id;
+    public Demo(String name){
         this.name = name;
+    }
+    static{
+        id = 7;
     }
     public void show(){
         System.out.println(id +" "+name);
@@ -11,7 +13,7 @@ class Demo{
 }
 public class Sample1 {
     public static void main(String[] args) {
-        Demo obj = new Demo(7, "Dhoni");
+        Demo obj = new Demo("Dhoni");
         obj.show();
     }
 }
